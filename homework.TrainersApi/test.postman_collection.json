@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "d15ce7f5-a02b-40fe-9e6f-c21af3f8d7ef",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33565418"
+	},
+	"item": [
+		{
+			"name": "getAllTrainers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/trainers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trainers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTrainer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n      \"firstName\" : \"Filip\",\r\n      \"lastName\": \"Kostadinovski\",\r\n      \"email\": \"hasasf\",\r\n      \"isCurrentlyTeaching\" : true,\r\n      \"timeEmployed\": \"1 year\",\r\n      \"coursesFinished\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trainers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trainers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTrainerById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/trainers/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trainers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "e4a2dd24-763a-4562-8019-c3f10083c778"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTrainer",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n    \"firstName\": \"Trajko\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trainers/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trainers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "fd985553-db05-4b40-995f-830b085573ef"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTrainer",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAll",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "publicRequest",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
